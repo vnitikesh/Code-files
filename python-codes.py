@@ -727,3 +727,76 @@ lst = list(itertools.chain.from_iterable(geek))
 print(lst)
 
 op- [1,2,3,4,5,6]
+
+
+
+63). Implementing whatsapp using python, tkinter other Graphics module
+https://www.geeksforgeeks.org/whatsapp-using-python/
+
+
+64). Designing a key-logger in python
+https://www.geeksforgeeks.org/design-a-keylogger-in-python/
+
+
+65). Performing google search in python
+https://www.geeksforgeeks.org/performing-google-search-using-python-code/
+
+
+66). Reading and generating QR codes in python
+https://www.geeksforgeeks.org/reading-generating-qr-codes-python-using-qrtools/
+
+
+67). Desktop news notifier in python
+https://www.geeksforgeeks.org/python-desktop-news-notifier-in-20-lines/
+
+
+68).Send SMS updates to mobile phone using python
+https://www.geeksforgeeks.org/send-sms-updates-mobile-phone-using-python/
+
+
+
+69).Send message to facebook friend using python
+https://www.geeksforgeeks.org/send-message-to-fb-friend-using-python/
+
+
+
+70). Send message to a telegram user in python
+https://www.geeksforgeeks.org/send-message-to-telegram-user-using-python/?ref=rp
+
+
+
+71). Send email from your Gmail account using python
+https://www.geeksforgeeks.org/send-mail-gmail-account-using-python/?ref=rp
+
+
+
+72). Send mail with attachments from Gmail account using python
+https://www.geeksforgeeks.org/send-mail-attachment-gmail-account-using-python/?ref=rp
+
+
+
+73). Send unlimited whatsapp messages using Javascript
+https://www.geeksforgeeks.org/send-unlimited-whatsapp-messages-using-javascript/?ref=rp
+
+
+74). Send PDF file through email using pdf-mail module
+https://www.geeksforgeeks.org/send-pdf-file-through-email-using-pdf-mail-module/?ref=rp
+
+
+75). Real time weather detection using Tkinter
+https://www.geeksforgeeks.org/python-real-time-weather-detection-using-tkinter/?ref=rp
+
+
+
+
+76). Scroll magic using jquery
+http://scrollmagic.io/examples/expert/image_sequence.html
+
+
+77). Creating a datepicker in python
+
+
+78). Creating a date picker in javascript
+
+
+79). https://jqueryui.com/widget/
