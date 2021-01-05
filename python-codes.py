@@ -358,3 +358,372 @@ op:-
 from textract import process# read doc/pdf file in python
 data = process("sample.doc")# This return file content in bytes
 data = process("sample.doc").decode("utf-8")# Change file read content into string type
+
+
+31). Copy all data from one file to another
+with open('pyFile.txt', 'r') as readObj:
+    with open('copyFile.txt', 'w') as obj:
+        obj.write(readObj.read())
+
+32). Delete all file data in one line
+with open('pyFile.txt', 'w') as obj:
+    pass
+
+or
+
+open('pyFile.txt', 'w').close()
+
+33).
+import re
+text = 'python programming language is for Devs'
+re.findall("p\w+", text)# \w+ is for getting all characters till space starts or character ends
+op:- ['python', 'programming']
+text = 'python programming language is for Devspublic'
+re.findall("p\w+", text)
+op:- ['python', 'programming', 'public']
+re.findall("p\w", text)
+op:- ['py', 'pr', 'pu']
+
+
+34).
+import re
+text = "Dummy python text"
+re.sub("m", "-", text)# sub() function is used for replacing multiple values at once unlike replace method
+op:- 'Du--y python text'
+re.sub("m|t", "-", text)
+op:-'Du--y py-hon -ex-'
+re.sub("m|t|o", "-", text)
+op:- 'Du--y py-h-n -ex-'
+
+
+35).
+key = ['a', 'b', 'c', 'd']
+value = [2,5,1,9]
+zip(key, value)
+op:- Create a zip object
+dict(zip(key, value))
+op:- {'d': 9, 'b': 5, 'c': 1, 'a': 2}
+list(zip(key,value))
+op:- [('a', 2), ('b', 5), ('c', 1), ('d', 9)]
+
+
+
+36). function called before its declaration/definition throws compile error in c++ but not in c
+#include<stdio.h>
+int main(){
+ foo();
+}
+
+int foo(){
+printf("Hello");
+return 0;
+}
+
+
+37). Below program throws compiler error in c++ but not in c
+--->
+#include <stdio.h>
+
+int main(void)
+{
+    int const j = 20;
+
+    /* The below assignment is invalid in C++, results in error
+       In C, the compiler *may* throw a warning, but casting is
+       implicitly allowed */
+    int *ptr = &j;  // A normal pointer points to const
+
+    printf("*ptr: %d\n", *ptr);
+
+    return 0;
+}
+
+
+38).Void pointer in C++ must be explicitly typecasted otherwise it will throw error
+--->
+
+#include <stdio.h>
+int main()
+{
+   void *vptr;
+   int *iptr = vptr; //In C++, it must be replaced with int *iptr=(int *)vptr;
+   return 0;
+}
+
+This is something we notice when we use malloc().
+Return type of malloc() is void *. In C++, we must explicitly
+ typecast return value of malloc() to appropriate type,
+ e.g., “int *p = (int *)malloc(sizeof(int))”.
+ In C, typecasting is not necessary.
+
+
+ 39). const variable in C++ must be initialized otherwise throws error
+ --->
+
+#include <stdio.h>
+int main()
+{
+    const int a;   // LINE 4
+    return 0;
+}
+
+Line 4 [Error] uninitialized const 'a' [-fpermissive]
+
+
+
+40). C++ does strict type checking
+--->
+
+#include <stdio.h>
+int main()
+{
+    char *c = 333; # In C++ invalid conversion from int to char
+    printf("c = %u", c);
+    return 0;
+    }
+
+
+
+Same program but different results in c vs c++
+
+41).
+---> C produces sizeof(int), C++ produces sizeof(char)
+Character literal is treated as int in C but character in C++
+
+#include<stdio.h>
+int main()
+{
+  printf("%d", sizeof('a'));
+  return 0;
+}
+
+
+42). Types of boolean results are different in C and C++
+
+//output = 4 in C(which is the size of int)
+printf("%d", sizeof(1==1));
+
+//output = 1 in C++ (which is the size of boolean datatype)
+cout << sizeof(1==1)
+
+43). Printing a particular sentence without using ;
+--> printf() returns the total number of characters written to stdout.
+--> Therefore it can be used as a condition check in an if condition,
+while condition, switch case and Macros.
+
+a). Using if() condition
+#include<stdio.h>
+{
+    if(printf("Channelise the flow of river"))
+    {  }
+}
+
+b). Using switch case
+#include<stdio.h>
+int main(){
+    switch (printf("Yes we are going to channelise"))
+    {   }
+
+}
+
+c). Using while() condition
+#include<stdio.h>
+int main(){
+    while(!printf("Channelise the workflow"))
+    {   }
+}
+
+d). Using Macros
+#include<stdio.h>
+#define PRINT printf("Geeks for Geeks")
+int main(){
+    if(PRINT)
+    {   }
+}
+
+44). Printing a ; without using semicolon
+#include<stdio.h>
+int main(){
+//ASCII value of ; is 59
+if(printf("%c", 59))
+{
+
+}
+}
+
+45). Printing numbers from 1 to N without semicolon
+a). Recursive approach
+#include<stdio.h>
+#define N 10
+
+int main(int num){
+    if(num <= N && printf("%d", num) && main(num + 1))
+    {
+
+    }
+}
+
+b). Iterative approach
+#include<stdio.h>
+#define N 10
+int main(int num, char *argv[])
+{
+    while(num <= N && printf("%d", num) && num++)
+    {
+
+    }
+}
+c).
+How do these above solutions work?
+main() function can receive arguments. The first argument is argument count whose value is 1 if no argument is passed to it. The first argument is always program name.
+#include<stdio.h>
+
+int main(int num, char *argv[])
+{
+   printf("num = %d\n", num);
+   printf("argv[0] = %s ", argv[0]);
+}
+
+Output:
+
+num = 1
+argv[0] = <file_name>
+
+
+46). printing a particular word without using loop, recursion and
+any control structure
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    printf("Hey");
+    system("test");
+    return 0;
+}
+
+
+47). Printing Even number or odd number without using loop
+---> Python
+arr = ["Even", "Odd"]
+print("enter the number")
+num = input()
+print(arr[int(num) % 2])
+
+---> C++
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+char arr[2][5] = {"Even", "Odd"};
+int num;
+cout << "Enter a number: ";
+cin >> num;
+cout << arr[num%2];
+getch();
+return 0;
+}
+
+
+48). Python GUI
+49). Python Turtle Graphics
+
+50). Class Method vs Static method in python
+
+51). Difference between *args and **kwargs in python
+*args(Non-Keyword argument) and **kwargs(keyword arguments)
+are the special symbols used for passing variable number of arguments
+to a python function.(GFG)
+
+52). Creating and updating PowerPoint Presentation in python using python-pptx
+(https://www.geeksforgeeks.org/creating-and-updating-powerpoint-presentations-in-python-using-python-pptx/?ref=rp)
+
+
+53). Enumerate() in python
+---> Enumerate() == iterator count
+---> Enumerate() method/function adds a counter to an iterable and returns
+it in a form of enumerate object.
+(https://www.geeksforgeeks.org/enumerate-in-python/?ref=leftbar-rightbar)
+
+
+
+54). Checking if two words are anagram
+a).
+from collections import Counter
+def is_anagram(str1, str2):
+    return Counter(str1) == Counter(str2)
+
+b).
+def is_anagram(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+print(is_anagram('geek', 'eegk'))# True
+print(is_anagram('geek', 'peek'))# False
+
+
+55). Checking the memory usage of an object
+import sys
+x = 1
+print(sys.getsizeof(x))
+
+
+56). Find the most frequent value in a list
+lst = [1,2,3,4,2,2,3,1,4,4,4]
+print(max(set(lst), key = lst.count))
+
+
+57). Returning multiple values from functions
+def func():
+    return 1,2,3,4
+a,b,c,d = func()
+print(a,b,c,d)
+
+op:- 1 2 3 4
+
+58).Printing the file path of imported modules
+import os
+import socket
+
+print(os)
+print(socket)
+
+
+59). Creating a single string from all the elements in list
+a = ["Geeks", "for", "Geeks"]
+print(" ".join(a))
+
+op:- "Geeks for Geeks"
+
+
+60). Printing more than one list's items sumultaneously
+
+list1 = [1,3,5,7]
+list2 = [2,4,6,8]
+# Here zip() function takes two equal length list and merge them
+#together in pairs
+for a, b in zip(list1, list2):
+    print(a, b)
+
+op-
+1 2
+3 4
+5 6
+7 8
+
+
+61). Conversion of string input into list
+formatted_list = list(map(int, input().split()))
+print(formatted_list)
+
+ip- 2 4 6 8
+op-[2, 4, 6, 8]
+
+62). Convert list of list into single list
+import itertools
+geek = [[1,2], [3, 4], [5, 6]]
+lst = list(itertools.chain.from_iterable(geek))
+print(lst)
+
+op- [1,2,3,4,5,6]
