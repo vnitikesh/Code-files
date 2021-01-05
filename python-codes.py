@@ -800,3 +800,333 @@ http://scrollmagic.io/examples/expert/image_sequence.html
 
 
 79). https://jqueryui.com/widget/
+
+
+80). https://www.hashbangcode.com/article/using-python-beat-2012-olympic-google-doodles
+--> Check out the above link.
+
+
+
+81).https://gitlab.com/the-gigi/pygame-breakout
+
+
+82). Using pygame module of Python
+https://code.tutsplus.com/tutorials/building-games-with-python-3-and-pygame-part-1--cms-30081
+
+
+
+83). https://towardsdatascience.com/making-simple-games-in-python-f35f3ae6f31a
+
+
+
+84). https://code-projects.org/dino-game-in-python-with-source-code/
+
+
+85). Simple number triangle pattern in python
+rows = 6
+
+for num in range(rows):
+
+    for i in range(num):
+
+        print(num, end=” “) # print number
+
+    # line after each row to display pattern correctly
+
+    print(” “)
+
+
+
+86).Inverted Pyramid of numbers
+rows = 5
+
+b = 0
+
+for i in range(rows, 0, -1):
+
+    b += 1
+
+    for j in range(1, i + 1):
+
+        print(b, end=’ ‘)
+
+    print(‘\r’)
+
+
+
+
+87). Half Pyramid pattern of numbers
+rows = 5
+
+for row in range(1, rows+1):
+
+    for column in range(1, row + 1):
+
+        print(column, end=’ ‘)
+
+    print(“”)
+
+
+
+88). Inverted Pyramid of Descending Numbers
+rows = 5
+
+for i in range(rows, 0, -1):
+
+    num = i
+
+    for j in range(0, i):
+
+        print(num, end=’ ‘)
+
+    print(“\r”)
+
+
+
+89). Inverted Pyramid of same digit
+rows = 5
+
+num = rows
+
+for i in range(rows, 0, -1):
+
+    for j in range(0, i):
+
+        print(num, end=’ ‘)
+
+    print(“\r”)
+
+
+90).Reverse Pyramid of Numbers
+rows = 6
+
+for row in range(1, rows):
+
+    for column in range(row, 0, -1):
+
+        print(column, end=’ ‘)
+
+    print(“”)
+
+
+91). Inverted Half Pyramid number pattern
+rows = 5
+
+for i in range(rows, 0, -1):
+
+    for j in range(0, i + 1):
+
+        print(j, end=’ ‘)
+
+    print(“\r”)
+
+
+92).Pyramid of Natural numbers less than 10
+urrentNumber = 1
+
+stop = 2
+
+rows = 3 # Rows you want in your pattern
+
+for i in range(rows):
+
+    for column in range(1, stop):
+
+        print(currentNumber, end=’ ‘)
+
+        currentNumber += 1
+
+    print(“”)
+
+    stop += 2
+
+
+93).Reverse pattern of digits from 10
+start = 1
+
+stop = 2
+
+currentNumber = stop
+
+for row in range(2, 6):
+
+    for col in range(start, stop):
+
+        currentNumber -= 1
+
+        print(currentNumber, end=’ ‘)
+
+    print(“”)
+
+    start = stop
+
+    stop += row
+
+    currentNumber = stop
+
+
+
+94).Unique Pyramid pattern of digits
+rows = 6
+
+for i in range(1, rows + 1):
+
+    for j in range(1, i – 1):
+
+        print(j, end=” “)
+
+    for j in range(i – 1, 0, -1):
+
+        print(j, end=” “)
+
+    print()
+
+
+95).Connected Inverted Pyramid Pattern of Numbers
+rows = 6
+
+for i in range(0, rows):
+
+    for j in range(rows – 1, i, -1):
+
+        print(j, ”, end=”)
+
+    for l in range(i):
+
+        print(‘ ‘, end=”)
+
+    for k in range(i + 1, rows):
+
+        print(k, ”, end=”)
+
+    print(‘\n’)
+
+
+96).Even number Pyramid Pattern
+rows = 5
+
+LastEvenNumber = 2 * rows
+
+evenNumber = LastEvenNumber
+
+for i in range(1, rows+1):
+
+    evenNumber = LastEvenNumber
+
+    for j in range(i):
+
+        print(evenNumber, end=’ ‘)
+
+        evenNumber -= 2
+
+    print(“\r”)
+
+
+97).Pyramid of Horizontal Tables
+rows = 7
+
+for i in range(0, rows):
+
+    for j in range(0, i + 1):
+
+        print(i * j, end=’ ‘)
+
+    print()
+
+
+98).Pyramid Pattern of Alternate Numbers
+rows = 5
+
+i = 1
+
+while i <= rows:
+
+    j = 1
+
+    while j <= i:
+
+        print((i * 2 – 1), end=” “)
+
+        j = j + 1
+
+    i = i + 1
+
+    print()
+
+
+99).Mirrored Pyramid(Right-angled Triangle) Pattern of Numbers
+rows = 6
+
+for row in range(1, rows):
+
+    num = 1
+
+    for j in range(rows, 0, -1):
+
+        if j > row:
+
+            print(” “, end=’ ‘)
+
+        else:
+
+            print(num, end=’ ‘)
+
+            num += 1
+
+    print(“”)
+
+
+100). Equilateral Triangles with Stars(Asterisk Symbol)
+print(“Print equilateral triangle Pyramid using stars “)
+
+size = 7
+
+m = (2 * size) – 2
+
+for i in range(0, size):
+
+    for j in range(0, m):
+
+        print(end=” “)
+
+    m = m – 1 # decrementing m after each loop
+
+    for j in range(0, i + 1):
+
+        # printing full Triangle pyramid using stars
+
+        print(“* “, end=’ ‘)
+
+    print(” “)
+
+
+101). Downward Triangle pattern of stars
+rows = 5
+
+k = 2 * rows – 2
+
+for i in range(rows, -1, -1):
+
+    for j in range(k, 0, -1):
+
+        print(end=” “)
+
+    k = k + 1
+
+    for j in range(0, i + 1):
+
+        print(“*”, end=” “)
+
+    print(“”)
+
+
+102).Pyramid Pattern of Stars
+rows = 5
+
+for i in range(0, rows):
+
+    for j in range(0, i + 1):
+
+        print(“*”, end=’ ‘)
+
+    print(“\r”)
